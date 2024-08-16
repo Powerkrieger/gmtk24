@@ -1,0 +1,61 @@
+[gd_scene load_steps=2 format=3 uid="uid://dexmix45s7j3p"]
+
+[ext_resource type="PackedScene" uid="uid://eqj0lq583q8l" path="res://scenes/Buildings/housingbuildingpanel.tscn" id="1_bvatr"]
+
+[node name="UI" type="Node2D"]
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = 952.0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="FlowContainer" type="FlowContainer" parent="Panel"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 8.0
+offset_right = 192.0
+offset_bottom = 624.0
+theme_override_constants/h_separation = 10
+theme_override_constants/v_separation = 10
+
+[node name="HousingBuildingPanel" parent="Panel/FlowContainer" instance=ExtResource("1_bvatr")]
+layout_mode = 2
+
+[node name="HousingBuildingPanel2" parent="Panel/FlowContainer" instance=ExtResource("1_bvatr")]
+layout_mode = 2
+
+[node name="HousingBuildingPanel3" parent="Panel/FlowContainer" instance=ExtResource("1_bvatr")]
+layout_mode = 2
+
+[node name="HousingBuildingPanel4" parent="Panel/FlowContainer" instance=ExtResource("1_bvatr")]
+layout_mode = 2
+
+[node name="HousingBuildingPanel5" parent="Panel/FlowContainer" instance=ExtResource("1_bvatr")]
+layout_mode = 2
+
+[node name="HousingBuildingPanel6" parent="Panel/FlowContainer" instance=ExtResource("1_bvatr")]
+layout_mode = 2
+
+[node name="HousingBuildingPanel7" parent="Panel/FlowContainer" instance=ExtResource("1_bvatr")]
+layout_mode = 2
+
+[node name="HousingBuildingPanel8" parent="Panel/FlowContainer" instance=ExtResource("1_bvatr")]
+layout_mode = 2
+
+[node name="HousingBuildingPanel9" parent="Panel/FlowContainer" instance=ExtResource("1_bvatr")]
+layout_mode = 2
+
+[node name="HousingBuildingPanel10" parent="Panel/FlowContainer" instance=ExtResource("1_bvatr")]
+layout_mode = 2
+
+[node name="HousingBuildingPanel11" parent="Panel/FlowContainer" instance=ExtResource("1_bvatr")]
+layout_mode = 2
+
+[node name="HousingBuildingPanel12" parent="Panel/FlowContainer" instance=ExtResource("1_bvatr")]
+layout_mode = 2
+
+[node name="HousingBuildingPanel13" parent="Panel/FlowContainer" instance=ExtResource("1_bvatr")]
+layout_mode = 2
+
+[node name="HousingBuildingPanel14" parent="Panel/FlowContainer" instance=ExtResource("1_bvatr")]
+layout_mode = 2

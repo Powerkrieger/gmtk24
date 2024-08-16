@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://eqj0lq583q8l"]
+
+[ext_resource type="Script" path="res://scenes/Buildings/housingbuildingpanel.gd" id="1_d0ft2"]
+[ext_resource type="PackedScene" uid="uid://dyvdpgf2o0mvi" path="res://scenes/Buildings/building1.tscn" id="2_fqew7"]
+
+[node name="HousingBuildingPanel" type="Panel"]
+custom_minimum_size = Vector2(80, 80)
+offset_right = 80.0
+offset_bottom = 80.0
+script = ExtResource("1_d0ft2")
+
+[node name="Building1" parent="." instance=ExtResource("2_fqew7")]
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]
