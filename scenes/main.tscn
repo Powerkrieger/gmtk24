@@ -1,10 +1,9 @@
-[gd_scene load_steps=17 format=3 uid="uid://knv3x5246mxw"]
+[gd_scene load_steps=16 format=3 uid="uid://knv3x5246mxw"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_hkcgf"]
-[ext_resource type="PackedScene" uid="uid://cewrnt58khe08" path="res://scenes/tilemap.tscn" id="1_xn5ld"]
+[ext_resource type="PackedScene" uid="uid://chpt1mtk3dcj1" path="res://scenes/tilemap.tscn" id="1_xn5ld"]
 [ext_resource type="PackedScene" uid="uid://byhfim7r5oepe" path="res://scenes/UI/ui.tscn" id="2_lfvov"]
 [ext_resource type="PackedScene" uid="uid://c0oq4c0ltmgkd" path="res://scenes/People/peoplegenerator.tscn" id="3_4ti05"]
-[ext_resource type="PackedScene" uid="uid://bd0v2cqijudcd" path="res://scenes/People/trainpeoplegenerator.tscn" id="4_b5wku"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ken64"]
 size = Vector2(148.596, 717)
@@ -65,9 +64,6 @@ metadata/_edit_lock_ = true
 [node name="UI" parent="." instance=ExtResource("2_lfvov")]
 z_index = 1
 metadata/_edit_lock_ = true
-
-[node name="TrainPeopleGenerator" parent="." instance=ExtResource("4_b5wku")]
-position = Vector2(128, 384)
 
 [node name="PeopleGenerator" parent="." instance=ExtResource("3_4ti05")]
 position = Vector2(330.216, 385.189)
@@ -157,7 +153,10 @@ position = Vector2(148.22, 215.107)
 shape = SubResource("RectangleShape2D_83twu")
 metadata/_edit_lock_ = true
 
-[node name="Timer" type="Timer" parent="."]
+[node name="TrainTimer" type="Timer" parent="."]
 wait_time = 3.0
 one_shot = true
 autostart = true
+
+[node name="TrainPeopleTimer" type="Timer" parent="."]
+one_shot = true

@@ -4,30 +4,16 @@
 script/source = "extends Node2D
 
 const PersonScene = [preload(\"res://scenes/People/trainPerson1.tscn\"), preload(\"res://scenes/People/trainPerson2.tscn\"), preload(\"res://scenes/People/trainPerson3.tscn\")]
-@onready var timer: Timer = $Timer
-
-var number = 1
-var speed = 50
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	timer.timeout.connect(_on_timer_timeout)
-	Events.train_stopped.connect(timer.start)
+	var person = PersonScene.pick_random().instantiate()
+	get_node(\"Path2D/PathFollow2D\").add_child(person)
+	print(\"Kinder: \" + str(get_tree().current_scene.get_node(\"TrainPeopleGenerator/Path2D/PathFollow2D\").get_child_count()))
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
-
-func _on_timer_timeout():
-	if Game.people + number > Game.housing_space:
-		# GAME OVER
-		pass
-	Game.people += number
-	for i in range(number):
-		var randp = randi_range(0,2)
-		var person = PersonScene.pick_random().instantiate()
-		get_tree().current_scene.get_node(\"TrainPeopleGenerator/Path2D/PathFollow2D\").add_child(person)
-		
 "
 
 [sub_resource type="Curve2D" id="Curve2D_q10am"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://dopys280c7i82"]
+[gd_scene load_steps=29 format=3 uid="uid://dopys280c7i82"]
 
 [ext_resource type="Script" path="res://scripts/trainpeople.gd" id="1_lygw3"]
 [ext_resource type="Texture2D" uid="uid://cin8fc6xn78k0" path="res://assets/Small-8-Direction-Characters_by_AxulArt.png" id="1_y5ija"]
@@ -226,11 +226,8 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8wcsh"]
-radius = 6.0
-height = 18.0
-
 [node name="Person" type="CharacterBody2D"]
+z_index = 4
 collision_layer = 4
 collision_mask = 3
 motion_mode = 1
@@ -241,7 +238,3 @@ script = ExtResource("1_lygw3")
 position = Vector2(0, -10)
 sprite_frames = SubResource("SpriteFrames_s1fwq")
 autoplay = "default"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -9)
-shape = SubResource("CapsuleShape2D_8wcsh")

@@ -3,6 +3,7 @@ extends Node
 var gold = 30
 var housing_space = 0
 var people = 0
+var waitTime = 10
 var smallHouse = {
 	"housing_space": 4,
 	"cost": 15,
