@@ -10,7 +10,6 @@ func _ready():
 	Events.train_gone.connect(timer.start)
 
 
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass

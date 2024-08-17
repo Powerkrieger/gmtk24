@@ -19,10 +19,6 @@ func _process(delta: float) -> void:
 	pass
 
 func _on_timer_timeout():
-	if Game.people + number > Game.housing_space:
-		# GAME OVER
-		pass
-	Game.people += number
 	for i in range(number):
 		var randp = randi_range(0,2)
 		var person = PersonScene.pick_random().instantiate()

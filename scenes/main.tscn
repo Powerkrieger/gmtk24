@@ -1,10 +1,11 @@
-[gd_scene load_steps=17 format=3 uid="uid://knv3x5246mxw"]
+[gd_scene load_steps=18 format=3 uid="uid://knv3x5246mxw"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_hkcgf"]
 [ext_resource type="PackedScene" uid="uid://cewrnt58khe08" path="res://scenes/tilemap.tscn" id="1_xn5ld"]
 [ext_resource type="PackedScene" uid="uid://byhfim7r5oepe" path="res://scenes/UI/ui.tscn" id="2_lfvov"]
 [ext_resource type="PackedScene" uid="uid://c0oq4c0ltmgkd" path="res://scenes/People/peoplegenerator.tscn" id="3_4ti05"]
 [ext_resource type="PackedScene" uid="uid://bd0v2cqijudcd" path="res://scenes/People/trainpeoplegenerator.tscn" id="4_b5wku"]
+[ext_resource type="PackedScene" uid="uid://dv2iijiin8p64" path="res://scenes/UI/gameOver.tscn" id="6_caxkb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ken64"]
 size = Vector2(148.596, 717)
@@ -161,3 +162,6 @@ metadata/_edit_lock_ = true
 wait_time = 3.0
 one_shot = true
 autostart = true
+
+[node name="GameOver" parent="." instance=ExtResource("6_caxkb")]
+visible = false

@@ -19,8 +19,8 @@ func _process(delta: float) -> void:
 
 func _on_timer_timeout():
 	if Game.people + number > Game.housing_space:
-		# GAME OVER
-		pass
+		get_tree().get_root().get_node(\"Main/GameOver\").set_visible(true)
+		get_tree().get_root().get_node(\"Main/UI\").set_visible(false)
 	Game.people += number
 	for i in range(number):
 		var direction = randi_range(0,4)
@@ -37,5 +37,4 @@ func _on_timer_timeout():
 script = SubResource("GDScript_qiicn")
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 10.0
 one_shot = true
