@@ -21,7 +21,7 @@ var bigHouse = {
 var shopHouse = {
 	"housing_space": 0,
 	"cost": 15,
-	"tax_per_hit":3
+	"tax_per_sec":3
 }
 var carHouse = {
 	"housing_space": 1000,
