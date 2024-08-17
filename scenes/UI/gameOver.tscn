@@ -26,14 +26,14 @@ offset_top = 32.0
 offset_right = 1088.0
 offset_bottom = 624.0
 
-[node name="GameOverLabel" type="Label" parent="."]
+[node name="MessageLabel" type="Label" parent="."]
+modulate = Color(1, 0, 0, 1)
 offset_left = 128.0
 offset_top = 64.0
 offset_right = 1024.0
 offset_bottom = 320.0
-theme_override_colors/font_color = Color(0.847059, 0, 0.266667, 1)
-theme_override_colors/font_shadow_color = Color(0.156863, 0.172549, 0.133333, 1)
-theme_override_colors/font_outline_color = Color(0.258824, 0.0980392, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.811765, 0.352941, 0, 1)
+theme_override_colors/font_outline_color = Color(0.627451, 0.529412, 0, 1)
 theme_override_fonts/font = ExtResource("3_1ks1a")
 theme_override_font_sizes/font_size = 70
 text = "Without enough housing people were heartbroken!

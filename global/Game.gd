@@ -1,22 +1,27 @@
 extends Node
 
-var gold = 30
+var win_condition = false
+
+var gold = 31
 var housing_space = 0
 var people = 0
+var tax_rate = 0
+
+
 var smallHouse = {
-	"housing_space": 4,
+	"housing_space": 5,
 	"cost": 15,
-	"tac_per_sec":1
+	"tax_per_sec":1
 }
 var bigHouse = {
 	"housing_space": 10,
 	"cost": 45,
-	"tac_per_sec":3
+	"tax_per_sec":3
 }
 var shopHouse = {
 	"housing_space": 0,
 	"cost": 15,
-	"tax_per_hit":10
+	"tax_per_hit":3
 }
 var carHouse = {
 	"housing_space": 1000,
