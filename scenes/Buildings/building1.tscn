@@ -1,13 +1,29 @@
-[gd_scene load_steps=5 format=3 uid="uid://dyvdpgf2o0mvi"]
+[gd_scene load_steps=6 format=3 uid="uid://dyvdpgf2o0mvi"]
 
 [ext_resource type="Texture2D" uid="uid://chvib64xm8yrl" path="res://assets/buildingTiles_102.png" id="1_3qhnt"]
 [ext_resource type="Texture2D" uid="uid://r5l5vvmygwf" path="res://assets/buildingTiles_030.png" id="2_omti0"]
-[ext_resource type="Texture2D" uid="uid://f7cumtod6ktu" path="res://scenes/Buildings/BlackCircle.tres" id="3_46vey"]
+[ext_resource type="Texture2D" uid="uid://cbm2243ddxv5j" path="res://scenes/Buildings/BlackCircle.tres" id="3_46vey"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_8q3eo"]
-radius = 78.1025
+[sub_resource type="CircleShape2D" id="CircleShape2D_dngwn"]
+radius = 41.1096
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_nlvey"]
+radius = 41.0122
 
 [node name="Building1" type="StaticBody2D"]
+collision_layer = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, -6)
+shape = SubResource("CircleShape2D_dngwn")
+
+[node name="BuildingDetector" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BuildingDetector"]
+position = Vector2(1, -6)
+shape = SubResource("CircleShape2D_nlvey")
 
 [node name="BuildingTiles102" type="Sprite2D" parent="."]
 z_index = 2
@@ -21,16 +37,8 @@ position = Vector2(1.00002, -6.99999)
 scale = Vector2(0.601504, 0.566929)
 texture = ExtResource("2_omti0")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1.90735e-05, 1.14441e-05)
-shape = SubResource("CircleShape2D_8q3eo")
-
 [node name="AreaBlack" type="Sprite2D" parent="."]
 visible = false
 position = Vector2(-1.5, -2)
 scale = Vector2(2.51562, 2.4375)
 texture = ExtResource("3_46vey")
-
-[node name="Label" type="Label" parent="."]
-offset_right = 40.0
-offset_bottom = 23.0
