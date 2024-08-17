@@ -32,7 +32,12 @@ func _on_gui_input(event: InputEvent) -> void:
 					tempTower.get_node(circleShadowNodeName).set_visible(false)
 					Game.gold -= house.cost
 					Game.housing_space += house.housing_space
-				
+					Game.tax_rate += house.tax_per_sec
+					var game_over = get_tree().get_root().get_node("Main/GameOver")
+					game_over.get_node("MessageLabel").text = "Well done! Since you built the car dealership, the lovetrain stays empty."
+					game_over.get_node("MessageLabel").modulate = Color(0, 255, 0)
+					game_over.set_visible(true)
+					get_tree().get_root().get_node("Main/UI").set_visible(false)
 					
 		# dragging
 		if event is InputEventMouseMotion and event.button_mask == MOUSE_BUTTON_LEFT:

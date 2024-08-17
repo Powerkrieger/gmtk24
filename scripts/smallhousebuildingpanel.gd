@@ -32,6 +32,7 @@ func _on_gui_input(event: InputEvent) -> void:
 					tempTower.get_node(circleShadowNodeName).set_visible(false)
 					Game.gold -= house.cost
 					Game.housing_space += house.housing_space
+					Game.tax_rate += house.tax_per_sec
 				
 					
 		# dragging
