@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://bvwx5pr2rs42u"]
+
+[ext_resource type="Script" path="res://scripts/bighousebuildingpanel.gd" id="1_j1v81"]
+[ext_resource type="PackedScene" uid="uid://bl0giagkbqchb" path="res://scenes/Buildings/CarHouse.tscn" id="2_6a74j"]
+
+[node name="CarHouseBuildingPanel" type="Panel"]
+custom_minimum_size = Vector2(80, 80)
+offset_left = -40.0
+offset_top = -48.0
+offset_right = 40.0
+offset_bottom = 32.0
+script = ExtResource("1_j1v81")
+
+[node name="CarHouse" parent="." instance=ExtResource("2_6a74j")]
+position = Vector2(40, 48)
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]

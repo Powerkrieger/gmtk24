@@ -1,0 +1,137 @@
+[gd_scene load_steps=18 format=3 uid="uid://bl0giagkbqchb"]
+
+[ext_resource type="Texture2D" uid="uid://d0h3xdn0w5t5f" path="res://assets/CarHouse.png" id="1_urmah"]
+[ext_resource type="Texture2D" uid="uid://f7cumtod6ktu" path="res://scenes/Buildings/BlackCircle.tres" id="3_dn2mo"]
+[ext_resource type="Texture2D" uid="uid://da8jh0g6kbh6k" path="res://assets/smoke.png" id="3_i4okf"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dngwn"]
+radius = 41.1096
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_nlvey"]
+radius = 41.0122
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7tlum"]
+atlas = ExtResource("3_i4okf")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t7hyb"]
+atlas = ExtResource("3_i4okf")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5n56q"]
+atlas = ExtResource("3_i4okf")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f4xvp"]
+atlas = ExtResource("3_i4okf")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pm80a"]
+atlas = ExtResource("3_i4okf")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d67j6"]
+atlas = ExtResource("3_i4okf")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fhx64"]
+atlas = ExtResource("3_i4okf")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_clecv"]
+atlas = ExtResource("3_i4okf")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ycfp"]
+atlas = ExtResource("3_i4okf")
+region = Rect2(256, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fjir4"]
+atlas = ExtResource("3_i4okf")
+region = Rect2(288, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pb68w"]
+atlas = ExtResource("3_i4okf")
+region = Rect2(320, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0ulmv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7tlum")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t7hyb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5n56q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f4xvp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pm80a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d67j6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fhx64")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_clecv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6ycfp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fjir4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pb68w")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="CarHouse" type="StaticBody2D"]
+collision_layer = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, -6)
+shape = SubResource("CircleShape2D_dngwn")
+
+[node name="BuildingDetector" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BuildingDetector"]
+position = Vector2(1, -6)
+shape = SubResource("CircleShape2D_nlvey")
+
+[node name="BuildingTiles102" type="Sprite2D" parent="."]
+z_index = 2
+position = Vector2(0, 1.90735e-06)
+scale = Vector2(0.6, 0.545455)
+texture = ExtResource("1_urmah")
+
+[node name="AreaBlack" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-1.5, -2)
+scale = Vector2(2.51562, 2.4375)
+texture = ExtResource("3_dn2mo")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-13, -27)
+scale = Vector2(0.6, 0.545455)
+sprite_frames = SubResource("SpriteFrames_0ulmv")
+autoplay = "default"
+frame_progress = 0.596863
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="AnimatedSprite2D"]
+position = Vector2(40, 5.5)
+scale = Vector2(0.6, 0.545455)
+sprite_frames = SubResource("SpriteFrames_0ulmv")
+autoplay = "default"
+frame_progress = 0.308646

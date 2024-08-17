@@ -1,6 +1,6 @@
 extends Panel
 
-@onready var tower = preload("res://scenes/Buildings/building1.tscn")
+@onready var tower = preload("res://scenes/Buildings/CarHouse.tscn")
 var currTileLayer0
 var mainSceneNodePath = "Main"
 var uiPanelPath = "Main/UI/Panel"
