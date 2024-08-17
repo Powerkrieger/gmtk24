@@ -1524,18 +1524,18 @@ texture = ExtResource("4_g606v")
 texture_region_size = Vector2i(8, 8)
 0:0/0 = 0
 0:1/0 = 0
-0:2/animation_columns = 4
-0:2/animation_frame_0/duration = 1.0
-0:2/animation_frame_1/duration = 1.0
-0:2/animation_frame_2/duration = 1.0
-0:2/animation_frame_3/duration = 1.0
-0:2/0 = 0
 0:3/animation_columns = 4
 0:3/animation_frame_0/duration = 1.0
 0:3/animation_frame_1/duration = 1.0
 0:3/animation_frame_2/duration = 1.0
 0:3/animation_frame_3/duration = 1.0
 0:3/0 = 0
+0:2/animation_columns = 4
+0:2/animation_frame_0/duration = 1.0
+0:2/animation_frame_1/duration = 1.0
+0:2/animation_frame_2/duration = 1.0
+0:2/animation_frame_3/duration = 1.0
+0:2/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pahye"]
 texture = ExtResource("5_vh5ma")

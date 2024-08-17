@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://chvib64xm8yrl" path="res://assets/buildingTiles_102.png" id="1_3qhnt"]
 [ext_resource type="Texture2D" uid="uid://r5l5vvmygwf" path="res://assets/buildingTiles_030.png" id="2_omti0"]
-[ext_resource type="Texture2D" uid="uid://cbm2243ddxv5j" path="res://scenes/Buildings/BlackCircle.tres" id="3_46vey"]
+[ext_resource type="Texture2D" uid="uid://f7cumtod6ktu" path="res://scenes/Buildings/BlackCircle.tres" id="3_46vey"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_dngwn"]
 radius = 41.1096
