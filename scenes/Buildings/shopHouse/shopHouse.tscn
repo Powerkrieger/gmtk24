@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://ykoy2f87prrs"]
 
-[ext_resource type="Texture2D" uid="uid://clclnv3gpp2bb" path="res://assets/ShopHouse.png" id="1_7vcee"]
-[ext_resource type="Texture2D" uid="uid://f7cumtod6ktu" path="res://scenes/Buildings/BlackCircle.tres" id="3_eu0ew"]
+[ext_resource type="Texture2D" uid="uid://clclnv3gpp2bb" path="res://assets/ShopHouse.png" id="1_f2gyn"]
+[ext_resource type="Texture2D" uid="uid://f7cumtod6ktu" path="res://assets/BlackCircle.tres" id="2_yb71n"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_dngwn"]
 radius = 41.1096
@@ -28,10 +28,10 @@ shape = SubResource("CircleShape2D_nlvey")
 z_index = 1
 position = Vector2(1.00002, -6.99999)
 scale = Vector2(0.601504, 0.566929)
-texture = ExtResource("1_7vcee")
+texture = ExtResource("1_f2gyn")
 
 [node name="AreaBlack" type="Sprite2D" parent="."]
 visible = false
 position = Vector2(-1.5, -2)
 scale = Vector2(2.51562, 2.4375)
-texture = ExtResource("3_eu0ew")
+texture = ExtResource("2_yb71n")

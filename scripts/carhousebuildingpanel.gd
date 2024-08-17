@@ -1,15 +1,15 @@
 extends Panel
 
-@onready var tower = preload("res://scenes/Buildings/CarHouse.tscn")
+@onready var tower = preload("res://scenes/Buildings/carHouse/carHouse.tscn")
 var currTileLayer0
 var mainSceneNodePath = "Main"
 var uiPanelPath = "Main/UI/Panel"
 var circleShadowNodeName = "AreaBlack"
 var placeable = false
-var house1_cost = 10
+var house = Game.carHouse
 
 func _on_gui_input(event: InputEvent) -> void:
-	if Game.gold >= house1_cost:
+	if Game.gold >= house.cost:
 		var tempTower = tower.instantiate()
 		if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 			if event.pressed:
@@ -30,8 +30,8 @@ func _on_gui_input(event: InputEvent) -> void:
 					path.add_child(tempTower)
 					tempTower.global_position = event.global_position
 					tempTower.get_node(circleShadowNodeName).set_visible(false)
-					Game.gold -= house1_cost
-					Game.housing_space += Game.house1.housing_space
+					Game.gold -= house.cost
+					Game.housing_space += house.housing_space
 				
 					
 		# dragging

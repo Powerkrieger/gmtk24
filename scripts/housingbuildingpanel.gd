@@ -1,12 +1,12 @@
 extends Panel
 
-@onready var tower = preload("res://scenes/Buildings/shopHouse/shopHouse.tscn")
+@onready var tower = preload("res://scenes/Buildings/building1.tscn")
 var currTileLayer0
 var mainSceneNodePath = "Main"
 var uiPanelPath = "Main/UI/Panel"
 var circleShadowNodeName = "AreaBlack"
 var placeable = false
-var house = Game.shopHouse
+var house = Game.smallHouse
 
 func _on_gui_input(event: InputEvent) -> void:
 	if Game.gold >= house.cost:

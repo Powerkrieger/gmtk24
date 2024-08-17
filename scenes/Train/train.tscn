@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://dtxlfo1hbm7vg"]
 
-[ext_resource type="Script" path="res://scenes/train.gd" id="1_17o23"]
+[ext_resource type="Script" path="res://scripts/train.gd" id="1_17o23"]
 [ext_resource type="Texture2D" uid="uid://bhqif6kq2tvbj" path="res://assets/Train.png" id="1_qcdtp"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nsppl"]

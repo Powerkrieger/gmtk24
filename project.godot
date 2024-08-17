@@ -11,14 +11,14 @@ config_version=5
 [application]
 
 config/name="GMTKCrasher"
-run/main_scene="res://scenes/mainmenu.tscn"
+run/main_scene="res://scenes/UI/mainmenu.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
 
 Game="*res://global/Game.gd"
-Events="*res://global/events.gd"
+Events="*res://global/Events.gd"
 
 [display]
 

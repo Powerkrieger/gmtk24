@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://br0d64bheuj11"]
+
+[ext_resource type="Script" path="res://scripts/bighousebuildingpanel.gd" id="1_kcdi1"]
+[ext_resource type="PackedScene" uid="uid://disjb3sbkd65f" path="res://scenes/Buildings/bigHouse/bigHouse.tscn" id="2_my8jh"]
+[ext_resource type="FontFile" uid="uid://cq0wvabi65uog" path="res://assets/fonts/Counting Apples.ttf" id="3_n67r5"]
+
+[sub_resource type="GDScript" id="GDScript_ns36f"]
+script/source = "extends Label
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	self.text = str(Game.bigHouse.cost)
+"
+
+[node name="BigHouseBuildingPanel" type="Panel"]
+custom_minimum_size = Vector2(80, 80)
+offset_left = -40.0
+offset_top = -48.0
+offset_right = 40.0
+offset_bottom = 32.0
+script = ExtResource("1_kcdi1")
+
+[node name="BigHouse" parent="." instance=ExtResource("2_my8jh")]
+position = Vector2(40, 48)
+
+[node name="Label" type="Label" parent="BigHouse"]
+z_index = 3
+offset_left = -40.0
+offset_top = -48.0
+offset_right = 1.0
+offset_bottom = -17.0
+theme_override_fonts/font = ExtResource("3_n67r5")
+theme_override_font_sizes/font_size = 30
+text = "15"
+script = SubResource("GDScript_ns36f")
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]

@@ -1,7 +1,7 @@
 extends Node2D
 
 @onready var timer = $Timer
-const trainSpawnerScene = preload("res://scenes/train_spawner.tscn")
+const trainSpawnerScene = preload("res://scenes/Train/train_spawner.tscn")
 const trainPeopleGenerator = preload("res://scenes/People/trainpeoplegenerator.tscn")
 
 # Called when the node enters the scene tree for the first time.

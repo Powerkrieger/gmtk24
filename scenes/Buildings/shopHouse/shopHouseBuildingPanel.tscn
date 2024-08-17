@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://c3xb8nnas0jdw"]
+
+[ext_resource type="Script" path="res://scripts/shophousebuildingpanel.gd" id="1_gmb5c"]
+[ext_resource type="PackedScene" uid="uid://ykoy2f87prrs" path="res://scenes/Buildings/shopHouse/shopHouse.tscn" id="2_2y6ak"]
+[ext_resource type="FontFile" uid="uid://cq0wvabi65uog" path="res://assets/fonts/Counting Apples.ttf" id="3_exg72"]
+
+[sub_resource type="GDScript" id="GDScript_ibkrq"]
+script/source = "extends Label
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	self.text = str(Game.shopHouse.cost)
+"
+
+[node name="ShopHouseBuildingPanel" type="Panel"]
+custom_minimum_size = Vector2(80, 80)
+offset_left = -40.0
+offset_top = -48.0
+offset_right = 40.0
+offset_bottom = 32.0
+script = ExtResource("1_gmb5c")
+
+[node name="ShopHouse" parent="." instance=ExtResource("2_2y6ak")]
+position = Vector2(40, 48)
+
+[node name="Label" type="Label" parent="ShopHouse"]
+z_index = 3
+offset_left = -40.0
+offset_top = -48.0
+offset_right = 1.0
+offset_bottom = -17.0
+theme_override_fonts/font = ExtResource("3_exg72")
+theme_override_font_sizes/font_size = 30
+text = "15"
+script = SubResource("GDScript_ibkrq")
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]
