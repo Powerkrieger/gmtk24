@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://3whb0miku31e"]
 
-[ext_resource type="PackedScene" uid="uid://chpt1mtk3dcj1" path="res://scenes/tilemap.tscn" id="1_w3hwp"]
+[ext_resource type="PackedScene" uid="uid://cewrnt58khe08" path="res://scenes/tilemap.tscn" id="1_w3hwp"]
 
 [sub_resource type="GDScript" id="GDScript_x2wbq"]
 script/source = "extends Button
@@ -13,7 +13,9 @@ func _on_quit_pressed() -> void:
 script/source = "extends Button
 
 func _on_play_pressed() -> void:
+	# TODO implement some restart logic
 	get_tree().change_scene_to_file(\"res://scenes/main.tscn\")
+	
 "
 
 [node name="MainMenu" type="Node2D"]
@@ -26,6 +28,7 @@ offset_left = 128.0
 offset_top = 64.0
 offset_right = 1024.0
 offset_bottom = 576.0
+metadata/_edit_use_anchors_ = true
 
 [node name="WelcomeLabel" type="Label" parent="."]
 offset_left = 128.0
@@ -39,6 +42,7 @@ theme_override_font_sizes/font_size = 70
 text = "Welcome to Loveland"
 horizontal_alignment = 1
 vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="Quit" type="Button" parent="."]
 offset_left = 640.0
@@ -49,6 +53,7 @@ theme_override_font_sizes/font_size = 50
 text = "Quit
 "
 script = SubResource("GDScript_x2wbq")
+metadata/_edit_use_anchors_ = true
 
 [node name="Play" type="Button" parent="."]
 offset_left = 192.0
@@ -58,6 +63,7 @@ offset_bottom = 512.0
 theme_override_font_sizes/font_size = 50
 text = "Make Love"
 script = SubResource("GDScript_ip5oc")
+metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="Quit" to="Quit" method="_on_quit_pressed"]
 [connection signal="pressed" from="Play" to="Play" method="_on_play_pressed"]
