@@ -21,12 +21,19 @@ Game="*res://global/Game.gd"
 
 [display]
 
+window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
 [editor]
 
 version_control/plugin_name="GitPlugin"
 version_control/autoload_on_startup=true
+
+[layer_names]
+
+2d_physics/layer_1="world"
+2d_physics/layer_2="buildings"
+2d_physics/layer_3="people"
 
 [rendering]
 
