@@ -1,10 +1,12 @@
 extends Node
 
+
 var win_condition = false
 
 var gold = 31
 var housing_space = 0
 var people = 0
+const paytime = 10
 var tax_rate = 0
 
 
@@ -25,6 +27,6 @@ var shopHouse = {
 }
 var carHouse = {
 	"housing_space": 1000,
-	"cost": 1000,
+	"cost": 150000,
 	"tax_per_sec": 1000
 }
