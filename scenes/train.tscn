@@ -68,4 +68,8 @@ script = ExtResource("1_17o23")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_gfovw")
+autoplay = "default"
 frame_progress = 0.707077
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true

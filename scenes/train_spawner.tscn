@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://bi00wpgujfctq"]
+
+[ext_resource type="PackedScene" uid="uid://dtxlfo1hbm7vg" path="res://scenes/train.tscn" id="1_wc6eo"]
+
+[sub_resource type="Curve2D" id="Curve2D_oxl5s"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 112, 816, 0, 0, 0, 0, 112, 304, 0, 0, 0, 0, 112, -168)
+}
+point_count = 3
+
+[node name="TrainSpawner" type="Node2D"]
+
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource("Curve2D_oxl5s")
+metadata/_edit_lock_ = true
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2(112, 816)
+rotation = -1.5708
+loop = false
+
+[node name="Train" parent="Path2D/PathFollow2D" instance=ExtResource("1_wc6eo")]
+rotation = 1.5708
