@@ -2,39 +2,35 @@
 
 [ext_resource type="Texture2D" uid="uid://chvib64xm8yrl" path="res://assets/buildingTiles_102.png" id="1_3qhnt"]
 [ext_resource type="Texture2D" uid="uid://r5l5vvmygwf" path="res://assets/buildingTiles_030.png" id="2_omti0"]
+[ext_resource type="Texture2D" uid="uid://cbm2243ddxv5j" path="res://scenes/Buildings/BlackCircle.tres" id="3_46vey"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8q3eo"]
 radius = 78.1025
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0w8vj"]
-bg_color = Color(1, 0, 0, 0.313726)
-corner_radius_top_left = 1024
-corner_radius_top_right = 1024
-corner_radius_bottom_right = 1024
-corner_radius_bottom_left = 1024
 
 [node name="Building1" type="StaticBody2D"]
 
 [node name="BuildingTiles102" type="Sprite2D" parent="."]
 z_index = 2
-position = Vector2(40, 18)
+position = Vector2(1.00002, -29)
 scale = Vector2(0.6, 0.545455)
 texture = ExtResource("1_3qhnt")
 
 [node name="BuildingTiles030" type="Sprite2D" parent="."]
 z_index = 1
-position = Vector2(40, 40)
+position = Vector2(1.00002, -6.99999)
 scale = Vector2(0.601504, 0.566929)
 texture = ExtResource("2_omti0")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(39, 47)
+position = Vector2(1.90735e-05, 1.14441e-05)
 shape = SubResource("CircleShape2D_8q3eo")
 
-[node name="Area" type="Panel" parent="."]
+[node name="AreaBlack" type="Sprite2D" parent="."]
 visible = false
-offset_left = -39.0
-offset_top = -30.0
-offset_right = 118.0
-offset_bottom = 123.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_0w8vj")
+position = Vector2(-1.5, -2)
+scale = Vector2(2.51562, 2.4375)
+texture = ExtResource("3_46vey")
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
