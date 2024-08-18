@@ -11,11 +11,14 @@ var number = 1
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	timer.timeout.connect(_on_timer_timeout)
-	Events.people_popped.connect(timer.start)
+	Events.train_gone.connect(_smol_timer)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
+	
+func _smol_timer(dont_use):
+	timer.start(1)
 
 func _on_timer_timeout():
 	if Game.people + number > Game.housing_space:
