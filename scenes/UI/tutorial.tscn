@@ -1,0 +1,104 @@
+[gd_scene load_steps=12 format=3 uid="uid://rhhpbq2642gu"]
+
+[ext_resource type="Shader" path="res://scripts/scroll.gdshader" id="1_ygkgl"]
+[ext_resource type="Texture2D" uid="uid://dc74uphsmh5iv" path="res://assets/trainbackground.png" id="2_s8ynb"]
+[ext_resource type="Texture2D" uid="uid://c7a8r7fihxxhn" path="res://assets/Start.png" id="3_ttxw4"]
+[ext_resource type="Texture2D" uid="uid://cqeuxs3rg730k" path="res://assets/Tutorial/LoveTrainApproaching.png" id="4_84in0"]
+[ext_resource type="Theme" uid="uid://6qkqvcx5320a" path="res://assets/buttons/buttons.tres" id="4_iloid"]
+[ext_resource type="Texture2D" uid="uid://chea523l6m1ld" path="res://assets/Tutorial/Textbox.png" id="5_rkje5"]
+[ext_resource type="FontFile" uid="uid://cq0wvabi65uog" path="res://assets/fonts/Counting Apples.ttf" id="5_rku48"]
+[ext_resource type="PackedScene" uid="uid://cs05evhpaax3b" path="res://scenes/audio-control.tscn" id="6_cbew6"]
+[ext_resource type="Script" path="res://scenes/UI/skip.gd" id="8_stsd7"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_oac2o"]
+shader = ExtResource("1_ygkgl")
+
+[sub_resource type="GDScript" id="GDScript_ip5oc"]
+script/source = "extends Button
+
+func _on_play_pressed() -> void:
+	# TODO implement some restart logic
+	get_tree().change_scene_to_file(\"res://scenes/UI/tutorial2.tscn\")
+	
+"
+
+[node name="Tutorial" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1149.0
+offset_bottom = 645.0
+color = Color(1, 0.584314, 0.286275, 1)
+
+[node name="TrainPattern" type="TextureRect" parent="."]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_oac2o")
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("2_s8ynb")
+
+[node name="FakeMenu" type="TextureRect" parent="."]
+offset_left = -24.0
+offset_top = -256.0
+offset_right = 1576.0
+offset_bottom = 392.0
+texture = ExtResource("3_ttxw4")
+
+[node name="FakeMenu2" type="TextureRect" parent="."]
+offset_left = 8.0
+offset_top = 144.0
+offset_right = 376.0
+offset_bottom = 543.0
+texture = ExtResource("4_84in0")
+
+[node name="FakeMenu3" type="TextureRect" parent="."]
+offset_left = -8.0
+offset_top = 8.0
+offset_right = 1144.0
+offset_bottom = 656.0
+texture = ExtResource("5_rkje5")
+
+[node name="TextEdit" type="TextEdit" parent="."]
+offset_left = 528.0
+offset_top = 232.0
+offset_right = 1072.0
+offset_bottom = 400.0
+theme_override_fonts/font = ExtResource("5_rku48")
+theme_override_font_sizes/font_size = 24
+text = "The LoveTrain is approaching your 
+
+City and will flood it with his homeless 
+
+people."
+
+[node name="Continue" type="Button" parent="."]
+offset_left = 400.0
+offset_top = 544.0
+offset_right = 736.0
+offset_bottom = 624.0
+theme = ExtResource("4_iloid")
+theme_override_fonts/font = ExtResource("5_rku48")
+theme_override_font_sizes/font_size = 50
+text = "Continue
+"
+script = SubResource("GDScript_ip5oc")
+
+[node name="Skip" type="Button" parent="."]
+offset_left = 920.0
+offset_top = 544.0
+offset_right = 1104.0
+offset_bottom = 624.0
+theme = ExtResource("4_iloid")
+theme_override_fonts/font = ExtResource("5_rku48")
+theme_override_font_sizes/font_size = 50
+text = "Skip
+"
+script = ExtResource("8_stsd7")
+
+[node name="Control" parent="." instance=ExtResource("6_cbew6")]
+offset_left = 1021.69
+offset_top = 1.68179
+offset_right = 1061.69
+offset_bottom = 41.6818
+
+[connection signal="pressed" from="Continue" to="Continue" method="_on_play_pressed"]
+[connection signal="pressed" from="Skip" to="Skip" method="_on_play_pressed"]
