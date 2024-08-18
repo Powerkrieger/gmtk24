@@ -1,0 +1,46 @@
+[gd_scene load_steps=3 format=3 uid="uid://bd0v2cqijudcd"]
+
+[sub_resource type="GDScript" id="GDScript_qiicn"]
+script/source = "extends Node2D
+
+const PersonScene = [preload(\"res://scenes/People/trainPerson1.tscn\"), preload(\"res://scenes/People/trainPerson2.tscn\"), preload(\"res://scenes/People/trainPerson3.tscn\")]
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	var person = PersonScene.pick_random().instantiate()
+	get_node(\"Path2D/PathFollow2D\").add_child(person)
+	print(\"Kinder: \" + str(get_tree().current_scene.get_node(\"TrainPeopleGenerator/Path2D/PathFollow2D\").get_child_count()))
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+<<<<<<< HEAD
+=======
+
+func _on_timer_timeout():
+	for i in range(number):
+		var randp = randi_range(0,2)
+		var person = PersonScene.pick_random().instantiate()
+		get_tree().current_scene.get_node(\"TrainPeopleGenerator/Path2D/PathFollow2D\").add_child(person)
+		
+>>>>>>> 91b84ab3bdeeee54e58f120b68f37807314e0e3a
+"
+
+[sub_resource type="Curve2D" id="Curve2D_q10am"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 0, 0, 0, 0, 0, 128, -16)
+}
+point_count = 3
+
+[node name="TrainPeopleGenerator" type="Node2D"]
+script = SubResource("GDScript_qiicn")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource("Curve2D_q10am")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+loop = false

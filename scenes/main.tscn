@@ -1,9 +1,10 @@
-[gd_scene load_steps=17 format=3 uid="uid://ch7fubqmpdg4c"]
+[gd_scene load_steps=18 format=3 uid="uid://ch7fubqmpdg4c"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_hkcgf"]
 [ext_resource type="PackedScene" uid="uid://chpt1mtk3dcj1" path="res://scenes/tilemap.tscn" id="1_xn5ld"]
 [ext_resource type="PackedScene" uid="uid://byhfim7r5oepe" path="res://scenes/UI/ui.tscn" id="2_lfvov"]
 [ext_resource type="PackedScene" uid="uid://c0oq4c0ltmgkd" path="res://scenes/People/peoplegenerator.tscn" id="3_4ti05"]
+[ext_resource type="PackedScene" uid="uid://cs05evhpaax3b" path="res://scenes/audio-control.tscn" id="6_12e03"]
 [ext_resource type="PackedScene" uid="uid://dv2iijiin8p64" path="res://scenes/UI/gameOver.tscn" id="6_caxkb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ken64"]
@@ -164,3 +165,10 @@ one_shot = true
 
 [node name="GameOver" parent="." instance=ExtResource("6_caxkb")]
 visible = false
+
+[node name="Control" parent="." instance=ExtResource("6_12e03")]
+offset_left = 696.0
+offset_top = 8.0
+offset_right = 736.0
+offset_bottom = 48.0
+metadata/_edit_lock_ = true

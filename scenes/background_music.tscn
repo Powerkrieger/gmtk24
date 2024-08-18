@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://b6tgtcj6ijqfn"]
+
+[ext_resource type="AudioStream" uid="uid://dykcog0hbxt6w" path="res://assets/sounds/LoveTrainTheme.wav" id="1_m63sg"]
+
+[node name="BackgroundMusic" type="AudioStreamPlayer"]
+stream = ExtResource("1_m63sg")
+autoplay = true
+bus = &"Music"
