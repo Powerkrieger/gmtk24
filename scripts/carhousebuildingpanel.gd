@@ -50,4 +50,11 @@ func _on_gui_input(event: InputEvent) -> void:
 				get_child(1).get_node(circleShadowNodeName).modulate = Color(255, 0, 0)
 				placeable = false
 		
-		
+
+
+func _on_mouse_entered():
+	Popups.ItemPopup(Rect2i(Vector2i(global_position), Vector2i(size)), ["Car Dealership","150000","0","Wins the game",null])
+
+
+func _on_mouse_exited():
+	Popups.HideItemPopup()

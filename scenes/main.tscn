@@ -166,7 +166,7 @@ one_shot = true
 [node name="GameOver" parent="." instance=ExtResource("6_caxkb")]
 visible = false
 
-[node name="Control" parent="." instance=ExtResource("6_12e03")]
+[node name="MusicController" parent="." instance=ExtResource("6_12e03")]
 offset_left = 696.0
 offset_top = 8.0
 offset_right = 736.0

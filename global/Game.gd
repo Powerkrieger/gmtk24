@@ -3,7 +3,7 @@ extends Node
 
 var win_condition = false
 var waitTime = 10
-var gold = 150000
+var gold = 31
 var housing_space = 0
 var people = 1
 const paytime = 10

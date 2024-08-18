@@ -8,6 +8,8 @@ var circleShadowNodeName = "AreaBlack"
 var placeable = false
 var house = Game.smallHouse
 
+
+
 func _on_gui_input(event: InputEvent) -> void:
 	if Game.gold >= house.cost:
 		var tempTower = tower.instantiate()
@@ -50,4 +52,9 @@ func _on_gui_input(event: InputEvent) -> void:
 				get_child(1).get_node(circleShadowNodeName).modulate = Color(255, 0, 0)
 				placeable = false
 		
-		
+func _on_mouse_entered():
+	Popups.ItemPopup(Rect2i(Vector2i(global_position), Vector2i(size)), ["Small House","15","4",null,null])
+
+
+func _on_mouse_exited():
+	Popups.HideItemPopup()

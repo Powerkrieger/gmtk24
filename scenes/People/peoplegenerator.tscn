@@ -27,7 +27,8 @@ func _on_timer_timeout():
 		game_over.get_node(\"MessageLabel\").modulate = Color(255,0,0)
 		game_over.set_visible(true)
 		get_tree().get_root().get_node(\"Main/UI\").set_visible(false)
-		get_tree().get_root().get_node(\"Main/Control\").set_visible(false)
+		#fix for crash
+		#get_tree().get_root().get_node(\"Main/Control\").set_visible(false)
 	Game.people += number
 	for i in range(number):
 		var direction = randi_range(0,4)

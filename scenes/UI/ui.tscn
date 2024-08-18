@@ -34,6 +34,7 @@ func _process(delta: float) -> void:
 offset_left = 1056.0
 offset_right = 1152.0
 offset_bottom = 648.0
+mouse_filter = 1
 metadata/_edit_lock_ = true
 metadata/_edit_group_ = true
 
@@ -48,16 +49,20 @@ theme_override_constants/v_separation = 10
 
 [node name="SmallHouseBuildingPanel" parent="Panel/FlowContainer" instance=ExtResource("1_bvatr")]
 layout_mode = 2
+mouse_filter = 1
 script = ExtResource("2_uve3j")
 
 [node name="BigHouseBuildingPanel" parent="Panel/FlowContainer" instance=ExtResource("2_cc5mq")]
 layout_mode = 2
+mouse_filter = 1
 
 [node name="ShopHouseBuildingPanel" parent="Panel/FlowContainer" instance=ExtResource("4_kmul4")]
 layout_mode = 2
+mouse_filter = 1
 
 [node name="CarHouseBuildingPanel" parent="Panel/FlowContainer" instance=ExtResource("6_p3ddw")]
 layout_mode = 2
+mouse_filter = 1
 
 [node name="Gold" type="Label" parent="."]
 offset_left = 821.0
@@ -92,3 +97,12 @@ metadata/_edit_lock_ = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(576, 324)
+
+[connection signal="mouse_entered" from="Panel/FlowContainer/SmallHouseBuildingPanel" to="Panel/FlowContainer/SmallHouseBuildingPanel" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Panel/FlowContainer/SmallHouseBuildingPanel" to="Panel/FlowContainer/SmallHouseBuildingPanel" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Panel/FlowContainer/BigHouseBuildingPanel" to="Panel/FlowContainer/BigHouseBuildingPanel" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Panel/FlowContainer/BigHouseBuildingPanel" to="Panel/FlowContainer/BigHouseBuildingPanel" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Panel/FlowContainer/ShopHouseBuildingPanel" to="Panel/FlowContainer/ShopHouseBuildingPanel" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Panel/FlowContainer/ShopHouseBuildingPanel" to="Panel/FlowContainer/ShopHouseBuildingPanel" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Panel/FlowContainer/CarHouseBuildingPanel" to="Panel/FlowContainer/CarHouseBuildingPanel" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Panel/FlowContainer/CarHouseBuildingPanel" to="Panel/FlowContainer/CarHouseBuildingPanel" method="_on_mouse_exited"]
