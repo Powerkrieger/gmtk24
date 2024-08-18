@@ -33,11 +33,7 @@ func _on_gui_input(event: InputEvent) -> void:
 					Game.gold -= house.cost
 					Game.housing_space += house.housing_space
 					Game.tax_rate += house.tax_per_sec
-					var game_over = get_tree().get_root().get_node("Main/GameOver")
-					game_over.get_node("MessageLabel").text = "Well done! Since you built the car dealership, the lovetrain stays empty."
-					game_over.get_node("MessageLabel").modulate = Color(0, 255, 0)
-					game_over.set_visible(true)
-					get_tree().get_root().get_node("Main/UI").set_visible(false)
+					get_tree().change_scene_to_file("res://scenes/UI/win.tscn")
 					
 		# dragging
 		if event is InputEventMouseMotion and event.button_mask == MOUSE_BUTTON_LEFT:

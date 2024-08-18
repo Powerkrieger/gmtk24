@@ -47,6 +47,15 @@ offset_right = 1496.0
 offset_bottom = 488.0
 texture = ExtResource("3_ll82x")
 
+[node name="TextEdit" type="TextEdit" parent="."]
+offset_left = 136.0
+offset_top = 600.0
+offset_right = 1048.0
+offset_bottom = 640.0
+theme_override_fonts/font = ExtResource("5_ohkk5")
+theme_override_font_sizes/font_size = 24
+text = "By Powerkrieger and JimDoesntCarry for the GMTK Game Jam 2024"
+
 [node name="Quit" type="Button" parent="."]
 offset_left = 296.0
 offset_top = 488.0

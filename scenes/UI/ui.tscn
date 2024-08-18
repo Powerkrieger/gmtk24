@@ -25,7 +25,7 @@ func _process(delta: float) -> void:
 script/source = "extends Label
 
 func _process(delta: float) -> void:
-	self.text = \"Love Population: \" + str(Game.people)
+	self.text = \"Love Population: \" + str(Game.people - 1)
 "
 
 [node name="UI" type="Node2D"]

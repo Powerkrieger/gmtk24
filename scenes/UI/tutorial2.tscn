@@ -66,15 +66,17 @@ offset_bottom = 656.0
 texture = ExtResource("5_7dnvj")
 
 [node name="TextEdit" type="TextEdit" parent="."]
-offset_left = 528.0
-offset_top = 280.0
-offset_right = 1064.0
-offset_bottom = 376.0
+offset_left = 520.0
+offset_top = 216.0
+offset_right = 1072.0
+offset_bottom = 448.0
 theme_override_fonts/font = ExtResource("6_1ladp")
 theme_override_font_sizes/font_size = 24
 text = "Build housing for the homeless and gain
+recurring tax to build even more homes.
 
-recurring tax to build even more homes."
+But be aware that your tax office
+charges your citizens randomly."
 
 [node name="Continue" type="Button" parent="."]
 offset_left = 400.0

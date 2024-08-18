@@ -57,15 +57,17 @@ offset_bottom = 656.0
 texture = ExtResource("6_3ecvl")
 
 [node name="TextEdit" type="TextEdit" parent="."]
-offset_left = 528.0
-offset_top = 280.0
-offset_right = 1064.0
-offset_bottom = 384.0
+offset_left = 520.0
+offset_top = 216.0
+offset_right = 1072.0
+offset_bottom = 440.0
 theme_override_fonts/font = ExtResource("7_6k5if")
 theme_override_font_sizes/font_size = 24
-text = "Build the carhouse before the 
+text = "Build the cardealership to stop the
+Lovetrain desaster, before his
+hobos max out your space.
 
-homeless people max out your space."
+You are the only one to save the city!"
 
 [node name="Play" type="Button" parent="."]
 offset_left = 400.0
