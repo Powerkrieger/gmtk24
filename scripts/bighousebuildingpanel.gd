@@ -53,7 +53,7 @@ func _on_gui_input(event: InputEvent) -> void:
 
 
 func _on_mouse_entered():
-	Popups.ItemPopup(Rect2i(Vector2i(global_position), Vector2i(size)), ["Big House","45","8",null,null])
+	Popups.ItemPopup(Rect2i(Vector2i(global_position), Vector2i(size)), ["Big House","Cost","45","Space","8"])
 
 
 func _on_mouse_exited():

@@ -21,9 +21,7 @@ func HideItemPopup():
 	
 func set_value(item : Array):
 	%Name.text = str(item[0])
-	%PriceValue.text = str(item[1])
-	%SpaceValue.text = str(item[2])
-	if item[3] != null:
-		%Space.text = str(item[3])
-	if item[4] != null:
-		%SpaceValue.text = str(item[4])
+	%Price.text = str(item[1])
+	%PriceValue.text = str(item[2])
+	%Space.text = str(item[3])
+	%SpaceValue.text = str(item[4])
