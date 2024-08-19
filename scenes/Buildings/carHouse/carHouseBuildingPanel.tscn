@@ -31,8 +31,9 @@ offset_top = -48.0
 offset_right = 1.0
 offset_bottom = -17.0
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("3_mip2q")
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 15
 text = "15"
 script = SubResource("GDScript_3e65j")
 

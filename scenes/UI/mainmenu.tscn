@@ -29,8 +29,8 @@ func _on_play_pressed() -> void:
 [node name="MainMenu" type="Node2D"]
 
 [node name="ColorRect" type="ColorRect" parent="."]
-offset_right = 1149.0
-offset_bottom = 645.0
+offset_right = 1152.0
+offset_bottom = 648.0
 color = Color(1, 0.584314, 0.286275, 1)
 
 [node name="TrainPattern" type="TextureRect" parent="."]
@@ -41,10 +41,10 @@ offset_bottom = 648.0
 texture = ExtResource("1_wqbtq")
 
 [node name="FakeMenu" type="TextureRect" parent="."]
-offset_left = -120.0
-offset_top = -224.0
-offset_right = 1496.0
-offset_bottom = 488.0
+offset_left = -56.0
+offset_top = -192.0
+offset_right = 1560.0
+offset_bottom = 520.0
 texture = ExtResource("3_ll82x")
 
 [node name="TextEdit" type="TextEdit" parent="."]
@@ -57,9 +57,9 @@ theme_override_font_sizes/font_size = 24
 text = "By Powerkrieger and JimDoesntCarry for the GMTK Game Jam 2024"
 
 [node name="Quit" type="Button" parent="."]
-offset_left = 296.0
+offset_left = 368.0
 offset_top = 488.0
-offset_right = 704.0
+offset_right = 776.0
 offset_bottom = 592.0
 theme = ExtResource("4_pgckl")
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
@@ -71,10 +71,10 @@ text = "Quit
 script = SubResource("GDScript_x2wbq")
 
 [node name="Play" type="Button" parent="."]
-offset_left = 296.0
-offset_top = 336.0
-offset_right = 704.0
-offset_bottom = 448.0
+offset_left = 368.0
+offset_top = 368.0
+offset_right = 776.0
+offset_bottom = 480.0
 theme = ExtResource("4_pgckl")
 theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("5_ohkk5")
