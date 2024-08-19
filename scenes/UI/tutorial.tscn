@@ -57,14 +57,14 @@ offset_right = 1144.0
 offset_bottom = 656.0
 texture = ExtResource("5_rkje5")
 
-[node name="TextEdit" type="TextEdit" parent="."]
-offset_left = 520.0
+[node name="Label" type="Label" parent="."]
+offset_left = 544.0
 offset_top = 216.0
-offset_right = 1080.0
-offset_bottom = 448.0
-theme_override_constants/outline_size = 5
+offset_right = 1024.0
+offset_bottom = 445.0
+theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("5_rku48")
-theme_override_font_sizes/font_size = 24
+theme_override_font_sizes/font_size = 25
 text = "The LoveTrain is approaching your 
 City and will flood it with hobos.
 

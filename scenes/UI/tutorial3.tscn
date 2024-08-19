@@ -56,14 +56,14 @@ offset_right = 1144.0
 offset_bottom = 656.0
 texture = ExtResource("6_3ecvl")
 
-[node name="TextEdit" type="TextEdit" parent="."]
-offset_left = 520.0
-offset_top = 216.0
-offset_right = 1072.0
-offset_bottom = 440.0
-theme_override_constants/outline_size = 5
+[node name="Label" type="Label" parent="."]
+offset_left = 544.0
+offset_top = 232.0
+offset_right = 1066.0
+offset_bottom = 461.0
+theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("7_6k5if")
-theme_override_font_sizes/font_size = 24
+theme_override_font_sizes/font_size = 25
 text = "Build the cardealership to stop the
 Lovetrain desaster, before his
 hobos max out your space.

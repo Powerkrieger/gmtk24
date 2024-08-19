@@ -65,14 +65,14 @@ offset_right = 1144.0
 offset_bottom = 768.0
 texture = ExtResource("5_7dnvj")
 
-[node name="TextEdit" type="TextEdit" parent="."]
-offset_left = 520.0
-offset_top = 216.0
-offset_right = 1072.0
-offset_bottom = 512.0
-theme_override_constants/outline_size = 5
+[node name="Label" type="Label" parent="."]
+offset_left = 528.0
+offset_top = 232.0
+offset_right = 1084.0
+offset_bottom = 519.0
+theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("6_1ladp")
-theme_override_font_sizes/font_size = 24
+theme_override_font_sizes/font_size = 23
 text = "But watch out, you need to manage your
 building space very well.
 
