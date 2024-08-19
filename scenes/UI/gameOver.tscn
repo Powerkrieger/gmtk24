@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://dv2iijiin8p64"]
+[gd_scene load_steps=4 format=3 uid="uid://dv2iijiin8p64"]
 
 [ext_resource type="FontFile" uid="uid://bs76y7it113t6" path="res://assets/fonts/Corvid Conspirator v1.1.ttf" id="2_okmcf"]
 [ext_resource type="FontFile" uid="uid://cq0wvabi65uog" path="res://assets/fonts/Counting Apples.ttf" id="3_1ks1a"]
@@ -7,13 +7,6 @@
 script/source = "extends Button
 
 func _on_quit_pressed() -> void:
-	get_tree().quit()
-"
-
-[sub_resource type="GDScript" id="GDScript_pym0a"]
-script/source = "extends Button
-
-func _on_play_pressed() -> void:
 	get_tree().quit()
 "
 
@@ -44,27 +37,14 @@ autowrap_mode = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="Quit" type="Button" parent="."]
-offset_left = 672.0
+offset_left = 384.0
 offset_top = 384.0
-offset_right = 992.0
+offset_right = 704.0
 offset_bottom = 576.0
 theme_override_fonts/font = ExtResource("2_okmcf")
 theme_override_font_sizes/font_size = 50
 text = "Quit
 "
 script = SubResource("GDScript_en5ur")
-metadata/_edit_use_anchors_ = true
-
-[node name="Play" type="Button" parent="."]
-offset_left = 160.0
-offset_top = 384.0
-offset_right = 480.0
-offset_bottom = 576.0
-theme_override_fonts/font = ExtResource("3_1ks1a")
-theme_override_font_sizes/font_size = 50
-text = "Relove?"
-script = SubResource("GDScript_pym0a")
-metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="Quit" to="Quit" method="_on_quit_pressed"]
-[connection signal="pressed" from="Play" to="Play" method="_on_play_pressed"]

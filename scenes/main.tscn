@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://ch7fubqmpdg4c"]
+[gd_scene load_steps=19 format=3 uid="uid://ch7fubqmpdg4c"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_hkcgf"]
 [ext_resource type="PackedScene" uid="uid://chpt1mtk3dcj1" path="res://scenes/tilemap.tscn" id="1_xn5ld"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://c0oq4c0ltmgkd" path="res://scenes/People/peoplegenerator.tscn" id="3_4ti05"]
 [ext_resource type="PackedScene" uid="uid://cs05evhpaax3b" path="res://scenes/audio-control.tscn" id="6_12e03"]
 [ext_resource type="PackedScene" uid="uid://dv2iijiin8p64" path="res://scenes/UI/gameOver.tscn" id="6_caxkb"]
+[ext_resource type="AudioStream" uid="uid://b3i5rlma25y8g" path="res://assets/sounds/Coin.wav" id="7_6qq5d"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ken64"]
 size = Vector2(148.596, 717)
@@ -172,3 +173,8 @@ offset_top = 8.0
 offset_right = 736.0
 offset_bottom = 48.0
 metadata/_edit_lock_ = true
+
+[node name="sfx_coin" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_6qq5d")
+volume_db = -10.0
+bus = &"SFX"

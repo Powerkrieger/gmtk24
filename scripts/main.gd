@@ -2,6 +2,7 @@ extends Node2D
 
 @onready var train_timer = $TrainTimer
 @onready var train_people_timer = $TrainPeopleTimer
+@onready var sfx_coin = $sfx_coin
 
 const trainSpawnerScene = preload("res://scenes/Train/train_spawner.tscn")
 const trainPeopleGenerator = preload("res://scenes/People/trainpeoplegenerator.tscn")
@@ -22,6 +23,8 @@ func _ready():
 func _process(delta):
 	sum_delta += delta
 	if sum_delta - last_payday >= Game.paytime:
+		if floori(Game.tax_rate * Game.people) > 0:
+			sfx_coin.play()
 		print("payoff -> " + str(floori(Game.tax_rate * Game.people)))
 		Game.gold += floori(Game.tax_rate * Game.people)
 		last_payday += Game.paytime

@@ -3,8 +3,11 @@ extends CharacterBody2D
 @export var speed = 200
 @onready var timer = $Timer
 var stopping = 1
+@onready var sfx_train_approaching = $sfx_train_approaching
+@onready var sfx_train_departing = $sfx_train_departing
 
 func _ready():
+	sfx_train_approaching.play()
 	timer.timeout.connect(_on_timer_timeout)
 
 func _process(delta):
@@ -28,3 +31,4 @@ func _process(delta):
 
 func _on_timer_timeout():
 	speed = 1
+	sfx_train_departing.play()

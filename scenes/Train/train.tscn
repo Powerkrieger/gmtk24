@@ -1,7 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://dtxlfo1hbm7vg"]
+[gd_scene load_steps=13 format=3 uid="uid://vr0mhhvmme0"]
 
 [ext_resource type="Script" path="res://scripts/train.gd" id="1_17o23"]
 [ext_resource type="Texture2D" uid="uid://bhqif6kq2tvbj" path="res://assets/Train.png" id="1_qcdtp"]
+[ext_resource type="AudioStream" uid="uid://dj067dj25asxy" path="res://assets/sounds/TrainApproaching.wav" id="3_1517j"]
+[ext_resource type="AudioStream" uid="uid://b8hv7ll44i0wo" path="res://assets/sounds/TrainDeparting.wav" id="4_yepex"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nsppl"]
 atlas = ExtResource("1_qcdtp")
@@ -73,3 +75,13 @@ frame_progress = 0.707077
 
 [node name="Timer" type="Timer" parent="."]
 one_shot = true
+
+[node name="sfx_train_approaching" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_1517j")
+volume_db = -10.0
+bus = &"SFX"
+
+[node name="sfx_train_departing" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_yepex")
+volume_db = -10.0
+bus = &"SFX"
