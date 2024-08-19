@@ -40,9 +40,9 @@ func _on_gui_input(event: InputEvent) -> void:
 		# dragging
 		if event is InputEventMouseMotion and event.button_mask == MOUSE_BUTTON_LEFT:
 			get_child(1).global_position = event.global_position
-			var mapPath = get_tree().get_root().get_node("Main/Tilemap")
+			var mapPath = get_tree().get_root().get_node("Main/Tilemap/BaseWeed")
 			var tile = mapPath.local_to_map(mapPath.to_local(get_global_mouse_position()))
-			currTileLayer0 = mapPath.get_cell_atlas_coords(0, tile, false)  # 0 -> layer of tilemap
+			currTileLayer0 = mapPath.get_cell_atlas_coords(tile)  # 0 -> layer of tilemap
 			var targets = get_child(1).get_node("BuildingDetector").get_overlapping_bodies()
 			
 			if (currTileLayer0 == Vector2i(1,1)) and not targets.size() > 1:  # there is one static body in there always, dunno

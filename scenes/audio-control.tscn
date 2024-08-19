@@ -1,8 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://cs05evhpaax3b"]
+[gd_scene load_steps=3 format=3 uid="uid://cs05evhpaax3b"]
 
 [ext_resource type="FontFile" uid="uid://cq0wvabi65uog" path="res://assets/fonts/Counting Apples.ttf" id="1_e8xpr"]
 [ext_resource type="PackedScene" uid="uid://dn8ldj0ttsjjr" path="res://scenes/volume_slider.tscn" id="1_psx12"]
-[ext_resource type="FontFile" uid="uid://b3iybs73lds77" path="res://assets/fonts/Varnished.ttf" id="3_tnlsf"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -21,6 +20,8 @@ layout_mode = 2
 [node name="Music" type="Label" parent="PanelContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 10
 theme_override_fonts/font = ExtResource("1_e8xpr")
 text = "Music"
 
@@ -32,7 +33,9 @@ bus_name = "Music"
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
-theme_override_fonts/font = ExtResource("3_tnlsf")
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 10
+theme_override_fonts/font = ExtResource("1_e8xpr")
 text = "SFX
 "
 
