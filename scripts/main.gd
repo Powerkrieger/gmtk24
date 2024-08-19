@@ -6,6 +6,7 @@ extends Node2D
 
 const trainSpawnerScene = preload("res://scenes/Train/train_spawner.tscn")
 const trainPeopleGenerator = preload("res://scenes/People/trainpeoplegenerator.tscn")
+@onready var popup_location = $UI/PopupLocation
 
 
 var sum_delta = 0
@@ -25,6 +26,7 @@ func _process(delta):
 	if sum_delta - last_payday >= Game.paytime:
 		if floori(Game.tax_rate * Game.people) > 0:
 			sfx_coin.play()
+			popup_location.popup(floori(Game.tax_rate * Game.people))
 		print("payoff -> " + str(floori(Game.tax_rate * Game.people)))
 		Game.gold += floori(Game.tax_rate * Game.people)
 		last_payday += Game.paytime

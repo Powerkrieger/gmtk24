@@ -1,9 +1,11 @@
-[gd_scene load_steps=19 format=3 uid="uid://ch7fubqmpdg4c"]
+[gd_scene load_steps=21 format=3 uid="uid://ch7fubqmpdg4c"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_hkcgf"]
 [ext_resource type="PackedScene" uid="uid://chpt1mtk3dcj1" path="res://scenes/tilemap.tscn" id="1_xn5ld"]
 [ext_resource type="PackedScene" uid="uid://byhfim7r5oepe" path="res://scenes/UI/ui.tscn" id="2_lfvov"]
 [ext_resource type="PackedScene" uid="uid://c0oq4c0ltmgkd" path="res://scenes/People/peoplegenerator.tscn" id="3_4ti05"]
+[ext_resource type="Script" path="res://scripts/popup_location.gd" id="4_7vdhd"]
+[ext_resource type="PackedScene" uid="uid://ben52e8m70p3w" path="res://scenes/UI/floating_number.tscn" id="5_2tn6r"]
 [ext_resource type="PackedScene" uid="uid://cs05evhpaax3b" path="res://scenes/audio-control.tscn" id="6_12e03"]
 [ext_resource type="PackedScene" uid="uid://dv2iijiin8p64" path="res://scenes/UI/gameOver.tscn" id="6_caxkb"]
 [ext_resource type="AudioStream" uid="uid://b3i5rlma25y8g" path="res://assets/sounds/Coin.wav" id="7_6qq5d"]
@@ -66,6 +68,12 @@ metadata/_edit_lock_ = true
 
 [node name="UI" parent="." instance=ExtResource("2_lfvov")]
 z_index = 1
+metadata/_edit_lock_ = true
+
+[node name="PopupLocation" type="Marker2D" parent="UI"]
+position = Vector2(848, 32)
+script = ExtResource("4_7vdhd")
+money_node = ExtResource("5_2tn6r")
 metadata/_edit_lock_ = true
 
 [node name="PeopleGenerator" parent="." instance=ExtResource("3_4ti05")]

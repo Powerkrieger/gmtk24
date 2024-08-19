@@ -65,16 +65,15 @@ layout_mode = 2
 mouse_filter = 1
 
 [node name="Gold" type="Label" parent="."]
-offset_left = 821.0
-offset_top = 2.0
-offset_right = 1051.0
-offset_bottom = 33.0
+offset_left = 728.0
+offset_top = 32.0
+offset_right = 958.0
+offset_bottom = 63.0
 theme_override_fonts/font = ExtResource("2_fxjmn")
 theme_override_font_sizes/font_size = 30
 text = "0 Gold"
 horizontal_alignment = 2
 script = SubResource("GDScript_hcrt1")
-metadata/_edit_lock_ = true
 
 [node name="HousingSpace" type="Label" parent="."]
 offset_top = 32.0
