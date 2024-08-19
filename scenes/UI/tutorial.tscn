@@ -60,8 +60,8 @@ texture = ExtResource("5_rkje5")
 [node name="TextEdit" type="TextEdit" parent="."]
 offset_left = 520.0
 offset_top = 216.0
-offset_right = 1072.0
-offset_bottom = 440.0
+offset_right = 1080.0
+offset_bottom = 448.0
 theme_override_constants/outline_size = 5
 theme_override_fonts/font = ExtResource("5_rku48")
 theme_override_font_sizes/font_size = 24
@@ -71,7 +71,8 @@ City and will flood it with hobos.
 Everytime he arrives he will bring
 increasingly more hobos.
 
-You need to stop him!"
+Build homes for them before he 
+takes his next stop!"
 
 [node name="Continue" type="Button" parent="."]
 offset_left = 400.0

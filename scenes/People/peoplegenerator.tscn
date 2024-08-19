@@ -29,14 +29,16 @@ func _on_timer_timeout():
 		get_tree().get_root().get_node(\"Main/UI\").set_visible(false)
 		#fix for crash
 		#get_tree().get_root().get_node(\"Main/Control\").set_visible(false)
-	Game.people += number
-	for i in range(number):
+	for i in range(randi_range(number,4*number)):
+		Game.people += 1
 		var direction = randi_range(0,4)
 		var randp = randi_range(0,2)
 		var person = PersonScene.pick_random().instantiate()
 		person.position = position
 		person.direction = direction
 		get_tree().current_scene.add_child(person)
+		if i%3 == 0:
+			await get_tree().create_timer(0.2).timeout
 	number += 1
 		
 "

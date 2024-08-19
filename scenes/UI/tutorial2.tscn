@@ -60,24 +60,29 @@ texture = ExtResource("5_nckew")
 
 [node name="FakeMenu3" type="TextureRect" parent="."]
 offset_left = -8.0
-offset_top = 8.0
+offset_top = -24.0
 offset_right = 1144.0
-offset_bottom = 656.0
+offset_bottom = 768.0
 texture = ExtResource("5_7dnvj")
 
 [node name="TextEdit" type="TextEdit" parent="."]
 offset_left = 520.0
 offset_top = 216.0
 offset_right = 1072.0
-offset_bottom = 448.0
+offset_bottom = 512.0
 theme_override_constants/outline_size = 5
 theme_override_fonts/font = ExtResource("6_1ladp")
 theme_override_font_sizes/font_size = 24
-text = "Build housing for the homeless and gain
-recurring tax to build even more homes.
+text = "But watch out, you need to manage your
+building space very well.
 
-But be aware that your tax office
-charges your citizens randomly."
+You gain money by taxing your new
+citizens.
+(Btw. hobos are not known for
+regulary paying taxes.)
+
+Shops on the other hand pay taxes
+regulary."
 
 [node name="Continue" type="Button" parent="."]
 offset_left = 400.0

@@ -28,7 +28,7 @@ func _process(delta):
 			sfx_coin.play()
 			popup_location.popup(floori(Game.tax_rate * Game.people))
 		print("payoff -> " + str(floori(Game.tax_rate * Game.people)))
-		Game.gold += floori(Game.tax_rate * Game.people)
+		Game.gold += randi_range(floori(Game.tax_rate),floori(Game.tax_rate * Game.people))
 		last_payday += Game.paytime
 
 func _on_train_timer_timeout():
