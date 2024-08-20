@@ -41,16 +41,16 @@ texture = ExtResource("3_2q50m")
 
 [node name="FakeMenu3" type="TextureRect" parent="."]
 offset_left = -376.0
-offset_top = -8.0
+offset_top = -72.0
 offset_right = 1024.0
-offset_bottom = 720.0
+offset_bottom = 800.0
 texture = ExtResource("5_re1wt")
 
 [node name="Label" type="Label" parent="."]
-offset_left = 288.0
-offset_top = 232.0
-offset_right = 826.0
-offset_bottom = 461.0
+offset_left = 344.0
+offset_top = 272.0
+offset_right = 882.0
+offset_bottom = 501.0
 theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("6_xg1y3")
 theme_override_font_sizes/font_size = 25
@@ -63,6 +63,16 @@ GMTK Game Jam 2024.
 Please comment your feedback
 https://powerkrieger.itch.io/lovetrain"
 
+[node name="Label2" type="Label" parent="."]
+offset_left = 424.0
+offset_top = 224.0
+offset_right = 792.0
+offset_bottom = 384.0
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("6_xg1y3")
+theme_override_font_sizes/font_size = 50
+text = "YOU WON"
+
 [node name="Control" parent="." instance=ExtResource("9_tu4pw")]
 offset_left = 1021.69
 offset_top = 1.68179
@@ -70,10 +80,10 @@ offset_right = 1061.69
 offset_bottom = 41.6818
 
 [node name="Quit" type="Button" parent="."]
-offset_left = 392.0
-offset_top = 520.0
-offset_right = 800.0
-offset_bottom = 624.0
+offset_left = 376.0
+offset_top = 544.0
+offset_right = 784.0
+offset_bottom = 640.0
 theme = ExtResource("7_b4dmd")
 theme_override_fonts/font = ExtResource("6_xg1y3")
 theme_override_font_sizes/font_size = 50
