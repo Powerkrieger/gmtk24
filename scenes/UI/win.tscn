@@ -46,13 +46,14 @@ offset_right = 1024.0
 offset_bottom = 720.0
 texture = ExtResource("5_re1wt")
 
-[node name="TextEdit" type="TextEdit" parent="."]
-offset_left = 272.0
+[node name="Label" type="Label" parent="."]
+offset_left = 288.0
 offset_top = 232.0
-offset_right = 920.0
-offset_bottom = 472.0
+offset_right = 826.0
+offset_bottom = 461.0
+theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("6_xg1y3")
-theme_override_font_sizes/font_size = 24
+theme_override_font_sizes/font_size = 25
 text = "Thanks for playing our game.
 
 Powerkrieger and JimDoesn'tCarry

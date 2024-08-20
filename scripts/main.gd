@@ -24,11 +24,11 @@ func _ready():
 func _process(delta):
 	sum_delta += delta
 	if sum_delta - last_payday >= Game.paytime:
-		if floori(Game.tax_rate * Game.people) > 0:
+		if floori(Game.tax_rate + Game.people) > 0:
 			sfx_coin.play()
-			popup_location.popup(floori(Game.tax_rate * Game.people))
-		print("payoff -> " + str(floori(Game.tax_rate * Game.people)))
-		Game.gold += randi_range(floori(Game.tax_rate),floori(Game.tax_rate * Game.people))
+			popup_location.popup(floori(Game.tax_rate + Game.people))
+		print("payoff -> " + str(floori(Game.tax_rate + Game.people)))
+		Game.gold += randi_range(floori(Game.tax_rate),floori(Game.tax_rate + Game.people))
 		last_payday += Game.paytime
 
 func _on_train_timer_timeout():

@@ -11,19 +11,19 @@ var tax_rate = 0
 
 
 var smallHouse = {
-	"housing_space": 8,
+	"housing_space": 5,
 	"cost": 15,
 	"tax_per_sec":1
 }
 var bigHouse = {
-	"housing_space": 16,
+	"housing_space": 14,
 	"cost": 45,
 	"tax_per_sec":1
 }
 var shopHouse = {
 	"housing_space": 0,
 	"cost": 15,
-	"tax_per_sec":20
+	"tax_per_sec":10
 }
 var carHouse = {
 	"housing_space": 1000,
