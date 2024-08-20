@@ -16,14 +16,14 @@ var smallHouse = {
 	"tax_per_sec":1
 }
 var bigHouse = {
-	"housing_space": 14,
+	"housing_space": 10,
 	"cost": 45,
 	"tax_per_sec":1
 }
 var shopHouse = {
 	"housing_space": 0,
 	"cost": 15,
-	"tax_per_sec":10
+	"tax_per_sec":12
 }
 var carHouse = {
 	"housing_space": 1000,
