@@ -1,6 +1,9 @@
 # gmtk24
 Was nun?
 
+# itch
+You can find the game and more info at [Itch.io](https://powerkrieger.itch.io/lovetrain)
+
 # assets
 - Small 8-direction Characters by AxulArt 
 - Slime's Pixel Font Pack! v1.2 
